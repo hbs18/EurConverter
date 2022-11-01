@@ -5,11 +5,19 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 import androidx.core.widget.doOnTextChanged
+import com.google.android.material.color.DynamicColors
+import com.google.android.material.elevation.SurfaceColors
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // md3 status bar theming stuff
+        val color = SurfaceColors.SURFACE_2.getColor(this)
+        window.statusBarColor = color // Set color of system statusBar same as ActionBar
+        window.navigationBarColor = color // Set color of system navigationBar same as BottomNavigationView
+        // end md3 status bar theming stuff
 
         var conversionRate = 7.53
 
